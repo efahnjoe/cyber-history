@@ -15,7 +15,7 @@ tags:
   - Battle-of-Kyiv
   - Full-Scale-War
 timezone: Asia/Shanghai
-ogImage: https://ifbvrtihxbemwddmpusw.supabase.co/storage/v1/object/public/cyber-chronicles-images/og/og-v1.png
+ogImage: https://ifbvrtihxbemwddmpusw.supabase.co/storage/v1/object/public/cyber-history-images/og/og-v1.png
 description: 本文全面概述了從2014年起源到2026年當前局勢的俄烏戰爭。所有日期和事件均基於經過驗證的國際媒體報導和歷史記錄
 ---
 

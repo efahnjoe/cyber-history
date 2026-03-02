@@ -10,7 +10,7 @@ tags:
   - template
   - templater
 timezone: <%* tR += Intl.DateTimeFormat().resolvedOptions().timeZone %>
-ogImage: https://ifbvrtihxbemwddmpusw.supabase.co/storage/v1/object/public/cyber-chronicles-images/og/og-v1.png
+ogImage: https://ifbvrtihxbemwddmpusw.supabase.co/storage/v1/object/public/cyber-history-images/og/og-v1.png
 description:
 ---
 

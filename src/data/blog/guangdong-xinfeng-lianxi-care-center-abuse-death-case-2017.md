@@ -17,7 +17,7 @@ tags:
   - Guangdong-Abuse-Case
   - Death-Sentence-Suspended
 timezone: Asia/Shanghai
-ogImage: https://ifbvrtihxbemwddmpusw.supabase.co/storage/v1/object/public/cyber-chronicles-images/og/og-v1.png
+ogImage: https://ifbvrtihxbemwddmpusw.supabase.co/storage/v1/object/public/cyber-history-images/og/og-v1.png
 description: 2017年廣東新豐縣練溪托養中心曝光49天內20人非正常死亡，涉虐待被托養人員、挪用救助資金。民政局長等公職人員違規審批參與經營，2018年李翠瓊判死緩、潘忠蔼判無期，107名官員被問責，機構取締。
 ---
 

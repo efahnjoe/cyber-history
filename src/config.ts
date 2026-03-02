@@ -1,9 +1,9 @@
 export const SITE = {
-  website: "https://cyber-chronicles.pages.dev/", // replace this with your deployed domain
+  website: "https://cyber-history.pages.dev/", // replace this with your deployed domain
   author: "Efahn Joe",
   profile: "https://github.com/efahnjoe/",
   desc: "Those historical events you have never heard of.",
-  title: "Cyber Chronicles",
+  title: "Cyber History",
   ogImage: "og-images/og-v1.png",
   lightAndDarkMode: true,
   postPerIndex: 4,
@@ -14,7 +14,7 @@ export const SITE = {
   editPost: {
     enabled: true,
     text: "Edit page",
-    url: "https://github.com/efahnjoe/cyber-chronicles/edit/main/",
+    url: "https://github.com/efahnjoe/cyber-history/edit/main/",
   },
   dynamicOgImage: true,
   dir: "ltr", // "rtl" | "auto"

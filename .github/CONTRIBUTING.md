@@ -20,21 +20,21 @@ Here’s a summary of the different ways you can contribute:
 
 ## Open a new Issue
 
-If you find a bug or problem, first check whether a similar issue already exists. If you don’t find any open issue that addresses the bug/problem you’re facing, feel free to [open a new issue](https://github.com/efahnjoe/cyber-chronicles/issues/new/choose).
+If you find a bug or problem, first check whether a similar issue already exists. If you don’t find any open issue that addresses the bug/problem you’re facing, feel free to [open a new issue](https://github.com/efahnjoe/cyber-history/issues/new/choose).
 
 ## Feature Requests
 
 If you have an idea for a new feature or enhancement that could improve AstroPaper, we’d love to hear it! Before submitting a new feature request, please:
 
-1. **Check existing discussions/issues**: Review the [Discussions](https://github.com/efahnjoe/cyber-chronicles/discussions) or [Issues](https://github.com/efahnjoe/cyber-chronicles/issues) to see if the feature has already been requested or discussed. You can contribute by adding your thoughts or upvoting existing requests.
-2. **Open a new issue**: If you don’t find an existing discussion, you can open a new issue using the [Feature Request Template](https://github.com/efahnjoe/cyber-chronicles/issues/new?assignees=&labels=enhancement&projects=&template=%E2%9C%A8-feature-request.md&title=%5BFeature+Request%5D%3A+). Be as detailed as possible, describing the problem this feature would solve and how it would benefit AstroPaper users.
-3. **Discuss first**: If you’re unsure whether your idea is feasible or fits the project’s goals, feel free to [start a GitHub Discussion](https://github.com/efahnjoe/cyber-chronicles/discussions/new/choose) to gather feedback from the community.
+1. **Check existing discussions/issues**: Review the [Discussions](https://github.com/efahnjoe/cyber-history/discussions) or [Issues](https://github.com/efahnjoe/cyber-history/issues) to see if the feature has already been requested or discussed. You can contribute by adding your thoughts or upvoting existing requests.
+2. **Open a new issue**: If you don’t find an existing discussion, you can open a new issue using the [Feature Request Template](https://github.com/efahnjoe/cyber-history/issues/new?assignees=&labels=enhancement&projects=&template=%E2%9C%A8-feature-request.md&title=%5BFeature+Request%5D%3A+). Be as detailed as possible, describing the problem this feature would solve and how it would benefit AstroPaper users.
+3. **Discuss first**: If you’re unsure whether your idea is feasible or fits the project’s goals, feel free to [start a GitHub Discussion](https://github.com/efahnjoe/cyber-history/discussions/new/choose) to gather feedback from the community.
 
 ## Making PRs (Pull Requests)
 
 ### Solving an Issue
 
-Browse through the existing issues to find one that interests you. You can use labels to filter the issues. See the [Label](https://github.com/efahnjoe/cyber-chronicles/labels) section for more information.
+Browse through the existing issues to find one that interests you. You can use labels to filter the issues. See the [Label](https://github.com/efahnjoe/cyber-history/labels) section for more information.
 
 ### Making Changes to a Blog Post
 
@@ -52,4 +52,4 @@ Since AstroPaper doesn’t currently have automated testing, it’s especially u
 
 ## Starting a Discussion
 
-If you’re unsure whether your issue warrants a fix or if you just want to share ideas and get feedback, feel free to [start a GitHub discussion](https://github.com/efahnjoe/cyber-chronicles/discussions/new/choose). It’s a great way to engage with the community.
+If you’re unsure whether your issue warrants a fix or if you just want to share ideas and get feedback, feel free to [start a GitHub discussion](https://github.com/efahnjoe/cyber-history/discussions/new/choose). It’s a great way to engage with the community.

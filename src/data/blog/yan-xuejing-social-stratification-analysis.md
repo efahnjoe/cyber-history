@@ -15,7 +15,7 @@ tags:
   - Economic-Analysis
   - International-Comparison
 timezone: Asia/Shanghai
-ogImage: https://ifbvrtihxbemwddmpusw.supabase.co/storage/v1/object/public/cyber-chronicles-images/og/og-v1.png
+ogImage: https://ifbvrtihxbemwddmpusw.supabase.co/storage/v1/object/public/cyber-history-images/og/og-v1.png
 description: 從社會學、經濟學角度客觀分析閆學晶直播事件背後的階層分化機制，通過國際對比與多維度經濟數據揭示中國社會現存的社會不平等現象。
 ---
 

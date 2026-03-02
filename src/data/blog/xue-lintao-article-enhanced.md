@@ -16,7 +16,7 @@ tags:
   - 勞動模範
   - 社會批評
 timezone: Asia/Shanghai
-ogImage: https://ifbvrtihxbemwddmpusw.supabase.co/storage/v1/object/public/cyber-chronicles-images/og/og-v1.png
+ogImage: https://ifbvrtihxbemwddmpusw.supabase.co/storage/v1/object/public/cyber-history-images/og/og-v1.png
 description: 「薛林濤建議癌症患者繼續加班」背後，隱藏著中國工人被系統性剝削的真相。一個人的「奮鬥」，往往是另一群人苦難的開始。
 ---
 

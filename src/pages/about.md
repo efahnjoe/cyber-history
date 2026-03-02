@@ -3,7 +3,7 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-The 'Cyber Chronicles' specializes in collecting and documenting talented individuals and unique personalities from around the world, as well as local customs, covering multiple fields and ethnicities.
+The 'Cyber History' specializes in collecting and documenting talented individuals and unique personalities from around the world, as well as local customs, covering multiple fields and ethnicities.
 
 ## Disclaimer
 

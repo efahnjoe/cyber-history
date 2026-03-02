@@ -15,7 +15,7 @@ tags:
   - Shinzō-Abe
   - Plaza-Accord
 timezone: Asia/Shanghai
-ogImage: https://ifbvrtihxbemwddmpusw.supabase.co/storage/v1/object/public/cyber-chronicles-images/og/og-v1.png
+ogImage: https://ifbvrtihxbemwddmpusw.supabase.co/storage/v1/object/public/cyber-history-images/og/og-v1.png
 description: 從戰後奇蹟到泡沫崩潰、再到緩慢復甦——日本「失去的30年」的完整記錄與深度分析。
 ---
 
