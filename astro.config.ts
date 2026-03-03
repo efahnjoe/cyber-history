@@ -1,5 +1,5 @@
 import { defineConfig, envField, fontProviders } from "astro/config";
-import rehypeExternalLinks from 'rehype-external-links';
+import rehypeExternalLinks from "rehype-external-links";
 import tailwindcss from "@tailwindcss/vite";
 import { visualizer } from "rollup-plugin-visualizer";
 import sitemap from "@astrojs/sitemap";
@@ -36,15 +36,15 @@ export default defineConfig({
       ],
     },
     rehypePlugins: [
-      [rehypeExternalLinks, { target: '_blank', rel: 'noopener noreferrer' }]
-    ]
+      [rehypeExternalLinks, { target: "_blank", rel: "noopener noreferrer" }],
+    ],
   },
   vite: {
     // eslint-disable-next-line
     // @ts-ignore
     // This will be fixed in Astro 6 with Vite 7 support
     // See: https://github.com/withastro/astro/issues/14030
-    plugins: [tailwindcss(), visualizer({ filename: 'stats.html' })],
+    plugins: [tailwindcss(), visualizer({ filename: "stats.html" })],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },

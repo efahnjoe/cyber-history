@@ -18,29 +18,32 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
 </Layout>
 
 <script>
-  let converterPromise: Promise<((text: string) => string) | null> | null = null;
-  
+  let converterPromise: Promise<((text: string) => string) | null> | null =
+    null;
+
   async function getConverter() {
     if (converterPromise) return converterPromise;
 
-    converterPromise = new Promise((resolve) => {
-      const script = document.createElement('script');
-      script.src = "https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.min.js";
+    converterPromise = new Promise(resolve => {
+      const script = document.createElement("script");
+      script.src =
+        "https://cdn.jsdelivr.net/npm/opencc-js@1.0.5/dist/umd/full.min.js";
       script.onload = () => {
         let converter: ((text: string) => string) | null = null;
-        
+
         try {
           if (window.OpenCC) {
-            converter = window.OpenCC.Converter({ from: 'cn', to: 'tw' });
+            converter = window.OpenCC.Converter({ from: "cn", to: "tw" });
           }
         } catch (e) {
-          if(import.meta.env.DEV) console.warn('OpenCC Converter failed to initialize', e);
+          if (import.meta.env.DEV)
+            console.warn("OpenCC Converter failed to initialize", e);
         }
 
         resolve(converter);
       };
       script.onerror = () => {
-        console.warn('Failed to load OpenCC from CDN, fallback to raw search.');
+        console.warn("Failed to load OpenCC from CDN, fallback to raw search.");
         resolve(null);
       };
       document.head.appendChild(script);
@@ -97,7 +100,8 @@ const backUrl = SITE.showBackButton ? `${Astro.url.pathname}` : "/";
             try {
               processed = converter(original);
             } catch (e) {
-              if (import.meta.env.DEV) console.warn("簡轉繁（HK）失敗，使用原始詞:", original, e);
+              if (import.meta.env.DEV)
+                console.warn("簡轉繁（HK）失敗，使用原始詞:", original, e);
             }
           }
 

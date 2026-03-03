@@ -14,8 +14,8 @@ export default [
       parser: astroEslintParser,
       parserOptions: {
         parser: tsParser,
-        extraFileExtensions: [".astro"]
-      }
+        extraFileExtensions: [".astro"],
+      },
     },
   },
   { rules: { "no-console": "error" } },

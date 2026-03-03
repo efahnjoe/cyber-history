@@ -19,7 +19,10 @@ function findLatestOgImage(dir: string): string | null {
     const ogFiles = files
       .filter(file => /^og-v\d+\.png$/.test(file))
       .map(file => {
-        const version = parseInt(file.match(/^og-v(\d+)\.png$/)?.[1] || '0', 10);
+        const version = parseInt(
+          file.match(/^og-v(\d+)\.png$/)?.[1] || "0",
+          10
+        );
         return { file, version };
       })
       .sort((a, b) => b.version - a.version);

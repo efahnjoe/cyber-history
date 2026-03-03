@@ -7,6 +7,6 @@ interface Window {
     setTheme: (val: string) => void;
   };
   OpenCC?: {
-    Converter(options: { from: string, to: string }): (text: string) => string;
-  }
+    Converter(options: { from: string; to: string }): (text: string) => string;
+  };
 }
