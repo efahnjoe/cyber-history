@@ -1,0 +1,38 @@
+---
+type Props = {
+  sources?: Source[];
+  size?: "sm" | "lg";
+  class?: string;
+};
+
+type Source = {
+  org: string;
+  title: string;
+  url: string;
+};
+
+const { sources, size = "sm", class: className = "" } = Astro.props;
+
+if (!sources || sources.length === 0) {
+  return null;
+}
+---
+
+<div class:list={["flex", "flex-col", "gap-1", className]} title="Post sources">
+  <h2 class:list={[{ "sm:text-base": size === "lg" }]} id="sources">
+    Sources:
+  </h2>
+
+  <ul class:list={["list-disc space-y-1 pl-5"]}>
+    {
+      sources.map(source => (
+        <li class:list={[{ "sm:text-base": size === "lg" }]}>
+          <strong>{source.org}</strong>:
+          <a href={source.url} target="_blank" rel="noopener noreferrer">
+            {source.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

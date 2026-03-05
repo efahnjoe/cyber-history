@@ -14,6 +14,7 @@ import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
 import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
+import Sources from "@/components/Sources.astro";
 
 type Props = {
   post: CollectionEntry<"blog">;
@@ -33,6 +34,7 @@ const {
   timezone,
   tags,
   hideEditPost,
+  sources
 } = post.data;
 
 const { Content } = await render(post);
@@ -112,6 +114,8 @@ const nextPost =
       class="app-prose mt-8 w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
     >
       <Content />
+
+      <Sources {sources} />
     </article>
 
     <hr class="my-8 border-dashed" />
