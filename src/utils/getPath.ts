@@ -1,4 +1,4 @@
-import { BLOG_PATH } from "@/content.config";
+import { POSTS_PATH } from "@/content.config";
 import { slugifyStr } from "./slugify";
 
 /**
@@ -14,7 +14,7 @@ export function getPath(
   includeBase = true
 ) {
   const pathSegments = filePath
-    ?.replace(BLOG_PATH, "")
+    ?.replace(POSTS_PATH, "")
     .split("/")
     .filter(path => path !== "") // remove empty string in the segments ["", "other-path"] <- empty string will be removed
     .filter(path => !path.startsWith("_")) // exclude directories start with underscore "_"

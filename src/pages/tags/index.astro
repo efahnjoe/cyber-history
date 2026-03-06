@@ -8,7 +8,7 @@ import Footer from "@/components/Footer.astro";
 import getUniqueTags from "@/utils/getUniqueTags";
 import { SITE } from "@/config";
 
-const posts = await getCollection("blog");
+const posts = await getCollection("posts");
 
 let tags = getUniqueTags(posts);
 
@@ -34,13 +34,11 @@ const letters = Object.keys(groupedTags).sort();
       {tags.map(({ tag, tagName }) => <Tag {tag} {tagName} />)}
     </ul> -->
 
-    <div class="space-y-8 grid grid-cols-1 sm:grid-cols-2   gap-6">
+    <div class="grid grid-cols-1 gap-6 space-y-8 sm:grid-cols-2">
       {
         letters.map(letter => (
-          <div class="rounded-lg border  p-4 shadow-sm ">
-            <h2 class="mb-3 border-b pb-1 text-xl font-bold">
-              {letter}
-            </h2>
+          <div class="rounded-lg border p-4 shadow-sm">
+            <h2 class="mb-3 border-b pb-1 text-xl font-bold">{letter}</h2>
 
             <ul class="flex flex-wrap gap-3">
               {groupedTags[letter].map(({ tag, tagName }) => (

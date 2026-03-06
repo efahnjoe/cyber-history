@@ -10,7 +10,7 @@ export async function getStaticPaths() {
     return [];
   }
 
-  const posts = await getCollection("blog").then(p =>
+  const posts = await getCollection("posts").then(p =>
     p.filter(({ data }) => !data.draft && !data.ogImage)
   );
 
@@ -28,7 +28,7 @@ export async function getStaticPaths() {
 //     });
 //   }
 
-//   const buffer = await generateOgImageForPost(props as CollectionEntry<"blog">);
+//   const buffer = await generateOgImageForPost(props as CollectionEntry<"posts">);
 //   return new Response(new Uint8Array(buffer), {
 //     headers: { "Content-Type": "image/png" },
 //   });

@@ -8,7 +8,7 @@ import ReadingTime from "./ReadingTime.astro";
 
 type Props = {
   variant?: "h2" | "h3";
-} & CollectionEntry<"blog">;
+} & CollectionEntry<"posts">;
 
 const { variant: Heading = "h2", id, data, filePath } = Astro.props;
 

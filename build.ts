@@ -1,3 +1,5 @@
+#!/usr/bin/env bun
+
 import { spawn } from "bun";
 import { cp, mkdir } from "fs/promises";
 import { dirname } from "path";
@@ -26,7 +28,7 @@ async function clean(path: string): Promise<boolean> {
   }
 }
 
-// astro check && astro build && pagefind --force-language zh--site dist && cp - r dist/pagefind public/
+// astro check && astro build && pagefind --force-language en --site dist && cp - r dist/pagefind public/
 async function command(cmd: string[], cwd: string = ROOT_DIR): Promise<void> {
   const { exited } = spawn({
     cmd,
@@ -46,7 +48,7 @@ async function main(): Promise<void> {
   try {
     await command(["astro", "check"], ROOT_DIR);
     await command(["astro", "build"], ROOT_DIR);
-    await command(["pagefind", "--force-language", "zh", "--site", "dist"], ROOT_DIR);
+    await command(["pagefind", "--force-language", "en", "--site", "dist"], ROOT_DIR);
 
     await clean("public/pagefind");
     await copy("dist/pagefind", "public/pagefind");

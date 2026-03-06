@@ -17,8 +17,8 @@ import { SITE } from "@/config";
 import Sources from "@/components/Sources.astro";
 
 type Props = {
-  post: CollectionEntry<"blog">;
-  posts: CollectionEntry<"blog">[];
+  post: CollectionEntry<"posts">;
+  posts: CollectionEntry<"posts">[];
 };
 
 const { post, posts } = Astro.props;

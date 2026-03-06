@@ -4,9 +4,9 @@ import IconEdit from "@/assets/icons/IconEdit.svg";
 import { SITE } from "@/config";
 
 type Props = {
-  hideEditPost?: CollectionEntry<"blog">["data"]["hideEditPost"];
+  hideEditPost?: CollectionEntry<"posts">["data"]["hideEditPost"];
   class?: string;
-  post: CollectionEntry<"blog">;
+  post: CollectionEntry<"posts">;
 };
 
 const { hideEditPost, post, class: className = "" } = Astro.props;
