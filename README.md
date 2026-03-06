@@ -21,8 +21,9 @@ Please note the following:
 **The compiler assumes no responsibility for any errors, omissions, or consequences arising from the use of this material. Users are solely responsible for their interpretation and application of the content.**
 
 ## Obsidian plugins Used
-- **[Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian "Advanced Tables for Obsidian")**:  Adds advanced table functionality to Obsidian.
-- **[Dataview](https://github.com/blacksmithgu/obsidian-dataview "Obsidian Dataview")**:  Adds powerful querying and data visualization capabilities to Obsidian.
+
+- **[Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian "Advanced Tables for Obsidian")**: Adds advanced table functionality to Obsidian.
+- **[Dataview](https://github.com/blacksmithgu/obsidian-dataview "Obsidian Dataview")**: Adds powerful querying and data visualization capabilities to Obsidian.
 - **[Linter](https://github.com/platers/obsidian-linter "Obsidian Linter")** - Add format and style functionality to Obsidian.
 - **[Templater](https://github.com/SilentVoid13/Templater "Templater Plugin for Obsidian")** - Adds templating functionality to Obsidian.
 
