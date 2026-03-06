@@ -21,7 +21,19 @@ Please note the following:
 
 **The compiler assumes no responsibility for any errors, omissions, or consequences arising from the use of this material. Users are solely responsible for their interpretation and application of the content.**
 
-# Tools Used
+## Tools Used
 
 - **Main Framework**: [AstroPaper](https://github.com/satnaing/astro-paper)
 - **Editor**: [Obsidian](https://obsidian.md/)
+
+## Obsidian plugins Used
+- **[Advanced Tables](https://github.com/tgrosinger/advanced-tables-obsidian "Advanced Tables for Obsidian")**:  Adds advanced table functionality to Obsidian.
+- **[Dataview](https://github.com/blacksmithgu/obsidian-dataview "Obsidian Dataview")**:  Adds powerful querying and data visualization capabilities to Obsidian.
+- **[Linter](https://github.com/platers/obsidian-linter "Obsidian Linter")** - Add format and style functionality to Obsidian.
+- **[Templater](https://github.com/SilentVoid13/Templater "Templater Plugin for Obsidian")** - Adds templating functionality to Obsidian.
+
+## Licensing
+
+- **Source code**: Based on [AstroPaper](https://github.com/satnaing/astro-paper) (MIT License),modified by [Efahn Joe](https://github.com/efahnjoe).Original work © Sat Naing and contributors.
+- **Written content ("cyber-history")**: Dedicated to the public domain under [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) by Efahn Joe.<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="cc" style="max-width: 1em;max-height:1em;margin-left: .2em;" width="19.200000762939453" height="19.200000762939453"><img src="https://mirrors.creativecommons.org/presskit/icons/zero.svg" alt="cc0" style="max-width: 1em;max-height:1em;margin-left: .2em;" width="19.200000762939453" height="19.200000762939453">
+
