@@ -11,14 +11,48 @@ import { SITE } from "@/config";
 const posts = await getCollection("blog");
 
 let tags = getUniqueTags(posts);
+
+tags.sort((a, b) => a.tagName.localeCompare(b.tagName));
+
+const groupedTags = tags.reduce(
+  (acc, curr) => {
+    const firstChar = curr.tagName.charAt(0).toUpperCase();
+    if (!acc[firstChar]) acc[firstChar] = [];
+    acc[firstChar].push(curr);
+    return acc;
+  },
+  {} as Record<string, typeof tags>
+);
+
+const letters = Object.keys(groupedTags).sort();
 ---
 
 <Layout title={`Tags | ${SITE.title}`}>
   <Header />
   <Main pageTitle="Tags" pageDesc="All the tags used in posts.">
-    <ul class="flex flex-wrap gap-6">
+    <!-- <ul class="flex flex-wrap gap-6">
       {tags.map(({ tag, tagName }) => <Tag {tag} {tagName} />)}
-    </ul>
+    </ul> -->
+
+    <div class="space-y-8 grid grid-cols-1 sm:grid-cols-2   gap-6">
+      {
+        letters.map(letter => (
+          <div class="rounded-lg border  p-4 shadow-sm ">
+            <h2 class="mb-3 border-b pb-1 text-xl font-bold">
+              {letter}
+            </h2>
+
+            <ul class="flex flex-wrap gap-3">
+              {groupedTags[letter].map(({ tag, tagName }) => (
+                <li>
+                  <Tag {tag} {tagName} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
   </Main>
   <Footer />
 </Layout>

@@ -58,6 +58,8 @@ const ogImage = ogImageUrl
   ? new URL(ogImageUrl, Astro.url.origin).href
   : undefined;
 
+const tagsMeta = tags ? tags.join(", ").replace(/-/g, " ") : "";
+
 const layoutProps = {
   title: `${title} | ${SITE.title}`,
   author,
@@ -91,6 +93,7 @@ const nextPost =
     id="main-content"
     class:list={["app-layout pb-12", { "mt-8": !SITE.showBackButton }]}
     data-pagefind-body
+    data-pagefind-meta={`tags: [${tagsMeta}]`}
   >
     <h1
       transition:name={slugifyStr(title.replaceAll(".", "-"))}
