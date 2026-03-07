@@ -1,0 +1,68 @@
+---
+import type { MarkdownHeading } from "astro";
+
+type Props = {
+  headings: MarkdownHeading[];
+};
+
+const { headings } = Astro.props;
+const toc = headings.filter(h => h.depth >= 2 && h.depth <= 4);
+---
+
+<nav class="overflow-y-auto pr-2 [scrollbar-width:thin]">
+  <p class="mb-3 font-semibold tracking-widest uppercase opacity-80">
+    <strong>On this page</strong>
+  </p>
+  <ul class="border-l border-current">
+    {
+      toc.map(({ depth, slug, text }) => (
+        <li class:list={["relative", { "pl-3.5": depth === 3 }]}>
+          <a
+            href={`#${slug}`}
+            class:list={[
+              "toc-link relative block py-1 pl-3.5 leading-snug no-underline opacity-70 transition-opacity duration-200 before:absolute before:inset-y-0 before:-left-px before:w-0.5 before:rounded-sm before:bg-transparent before:transition-colors before:duration-200 hover:opacity-100",
+              depth === 2 && "text-[0.8125rem]",
+              depth === 3 && "pl-6 text-[0.75rem]",
+            ]}
+          >
+            {text}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<script>
+  const links = document.querySelectorAll<HTMLAnchorElement>(".toc-link");
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const id = entry.target.getAttribute("id");
+        links.forEach(a => a.classList.remove("active"));
+        document
+          .querySelector<HTMLAnchorElement>(`.toc-link[href="#${id}"]`)
+          ?.classList.add("active");
+      });
+    },
+    { rootMargin: "0px 0px -80% 0px" }
+  );
+
+  document.querySelectorAll("h1[id], h2[id], h3[id]").forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+<style>
+  .toc-link.active {
+    opacity: 1;
+    font-weight: 500;
+    color: var(--color-accent);
+  }
+
+  .toc-link.active::before {
+    background: var(--color-accent);
+  }
+</style>
