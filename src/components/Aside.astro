@@ -1,0 +1,20 @@
+---
+type Props = {
+  class?: string;
+  as?: "aside" | "nav" | "div" | "section";
+  position?: "left" | "right";
+};
+
+const { class: className, as: Tag = "aside", position } = Astro.props;
+---
+
+<Tag
+  class:list={[
+    "max-h-[calc(100vh-6rem)] max-w-full overflow-y-auto",
+    position === "left" && "order-first",
+    position === "right" && "order-last",
+    className,
+  ]}
+>
+  <slot />
+</Tag>
