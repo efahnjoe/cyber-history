@@ -16,7 +16,7 @@ const toc = headings.filter(h => h.depth >= 2 && h.depth <= 4);
   <ul class="border-l border-current">
     {
       toc.map(({ depth, slug, text }) => (
-        <li class:list={["relative", { "pl-3.5": depth === 3 }]}>
+        <li class:list={["relative", { "pl-3.5": depth === 3 }]}  title={text}>
           <a
             href={`#${slug}`}
             class:list={[
