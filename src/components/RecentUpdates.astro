@@ -1,0 +1,73 @@
+---
+import { getCollection } from "astro:content";
+import { getPath } from "@/utils/getPath";
+
+type Props = {
+  limit?: number;
+  title?: string;
+  class?: string;
+};
+
+const { limit = 4, title = "Recent Updates" } = Astro.props;
+
+const allPosts = await getCollection("posts");
+
+const recentUpdates = allPosts
+  .filter(({ data }) => !!data.modDatetime)
+  .sort((a, b) => {
+    const dateA = a.data.modDatetime
+      ? new Date(a.data.modDatetime).getTime()
+      : 0;
+    const dateB = b.data.modDatetime
+      ? new Date(b.data.modDatetime).getTime()
+      : 0;
+    return dateB - dateA;
+  })
+  .slice(0, limit);
+---
+
+<div class="flex flex-col overflow-y-auto border pr-2 [scrollbar-width:thin]">
+  <p class="mt-1 mb-3 ml-3 border-b text-center text-2xl font-bold">
+    <strong>{title}</strong>
+  </p>
+
+  {
+    recentUpdates.length > 0 ? (
+      <ul class="list-inside p-0">
+        {recentUpdates.map(post => {
+          const href = getPath(post.id, post.filePath);
+
+          const dateStr = post.data.modDatetime
+            ? new Date(post.data.modDatetime).toLocaleDateString(undefined, {
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+              })
+            : "";
+
+          return (
+            <li class="relative pr-2" title={post.data.title}>
+              <a
+                href={href}
+                class="block py-2 pl-3.5 no-underline opacity-60 transition-opacity duration-200 hover:opacity-100"
+              >
+                <p class="font-bol line-clamp-2 text-sm">
+                  <strong>{post.data.title}</strong>
+                </p>
+                {dateStr && (
+                  <span class="mt-1 block text-sm">
+                    <i>Updated: {dateStr}</i>
+                  </span>
+                )}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    ) : (
+      <p class="pl-3.5">
+        <i>No recent updates found.</i>
+      </p>
+    )
+  }
+</div>
