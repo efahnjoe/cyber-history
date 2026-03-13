@@ -1,0 +1,27 @@
+---
+type Props = {
+  position: "left" | "right";
+  as?: "aside" | "nav" | "div" | "section";
+  class?: string;
+  style?: string;
+};
+
+const {
+  position = "left",
+  class: className = "",
+  as: Tag = "aside",
+  style,
+} = Astro.props;
+---
+
+<Tag
+  class:list={[
+    "fixed top-24 hidden max-h-full max-w-md mx-auto min-w-72 overflow-y-auto xl:block",
+    position === "left" && "left-8 order-first 2xl:left-64",
+    position === "right" && "right-8 order-last 2xl:right-64",
+    className,
+  ]}
+  style={style}
+>
+  <slot />
+</Tag>

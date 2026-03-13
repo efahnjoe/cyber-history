@@ -2,7 +2,9 @@
 import { render, type CollectionEntry } from "astro:content";
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
+import Aside from "@/components/Aside.astro";
 import Footer from "@/components/Footer.astro";
+import TableOfContents from "@/components/TableOfContents.astro";
 import Tag from "@/components/Tag.astro";
 import Datetime from "@/components/Datetime.astro";
 import EditPost from "@/components/EditPost.astro";
@@ -16,12 +18,15 @@ import IconChevronRight from "@/assets/icons/IconChevronRight.svg";
 import { SITE } from "@/config";
 import Sources from "@/components/Sources.astro";
 
+import type { MarkdownHeading } from "astro";
+
 type Props = {
   post: CollectionEntry<"posts">;
   posts: CollectionEntry<"posts">[];
+  headings: MarkdownHeading[];
 };
 
-const { post, posts } = Astro.props;
+const { post, posts, headings } = Astro.props;
 
 const {
   title,
@@ -167,6 +172,14 @@ const nextPost =
       }
     </div>
   </main>
+
+  <Aside
+    as="aside"
+    position="right"
+    class=" w-72"
+  >
+    <TableOfContents headings={headings} />
+  </Aside>
   <Footer />
 </Layout>
 
