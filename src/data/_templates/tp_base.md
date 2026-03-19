@@ -4,7 +4,6 @@ description:
 draft: true
 featured: false
 modDatetime:
-ogImage: https://ifbvrtihxbemwddmpusw.supabase.co/storage/v1/object/public/images/og/og-v1.webp
 pubDatetime: '<%* tR += tp.date.now("YYYY-MM-DDTHH:mm:ss[Z]") %>'
 readingTime: 0
 slug: <%* const title = tp.file.title || ""; if (/[\u4e00-\u9fff]/.test(title)) { tR += ""; } else { const slug = title.toLowerCase().replace(/[^a-z0-9\s-]/g, '').trim().replace(/[\s-]+/g, '-').replace(/^-+|-+$/g, ''); tR += slug; } %>
