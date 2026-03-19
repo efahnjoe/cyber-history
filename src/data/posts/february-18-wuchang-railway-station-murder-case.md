@@ -3,9 +3,9 @@ author: Efahn Joe
 description: At 12:25 noon on February 18, 2017, at the entrance of No. 71 Yi Village, Wunan Village, near the East Square of Wuchang Railway Station in Wuhan City, Hubei Province, 22-year-old Hu Zedong cut off the head of Yao, the owner of the noodle restaurant, with a kitchen knife and threw it into the trash can.
 draft: false
 featured: true
-modDatetime:
+modDatetime: 2026-03-20T05:57:36Z
 pubDatetime: 2026-03-20T05:24:46Z
-readingTime: 0
+readingTime: 6
 slug: february-18-wuchang-railway-station-murder-case
 sources:
   - org: NetEase News
@@ -16,10 +16,10 @@ sources:
     url: https://archive.ph/viR3k
 tags:
   - China
-  - Wuhan
-  - Murder-Case
   - Crime-of-Intentional-Homicide
   - Death-Penalty
+  - Murder-Case
+  - Wuhan
 timezone: Asia/Shanghai
 title: February 18 Wuchang Railway Station Murder Case
 ---
