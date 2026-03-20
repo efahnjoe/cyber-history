@@ -41,7 +41,7 @@ const modTime = isModified
 const formattedModDate = modTime ? modTime.format("YYYY/MM/DD") : "";
 ---
 
-<div class:list={["flex items-center gap-x-2 opacity-80", className]}>
+<div class:list={["flex items-center gap-x-1 opacity-80", className]}>
   <IconCalendar
     class:list={[
       "inline-block size-6 min-w-5.5",
@@ -69,16 +69,16 @@ const formattedModDate = modTime ? modTime.format("YYYY/MM/DD") : "";
     {
       isModified && modTime && showModtime && (
         <>
-          <span class="text-sm">|</span>
+          <p class="text-sm">|</p>
 
-          <span
+          <p
             class:list={[
               "text-sm text-amber-700 dark:text-amber-400",
               { "sm:text-base": size === "lg" },
             ]}
           >
             Upd:
-          </span>
+          </p>
 
           <time
             class:list={[

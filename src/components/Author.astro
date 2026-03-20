@@ -8,12 +8,8 @@ type Props = {
 const { author, size = "sm", class: className = "" } = Astro.props;
 ---
 
-<div class:list={["flex items-center gap-x-2 opacity-80", className]}>
-  <em>
-    <span class:list={["text-sm", { "sm:text-base": size === "lg" }]}>By</span>
-
-    <span class:list={["text-sm", { "sm:text-base": size === "lg" }]}
-      >{author}</span
-    >
-  </em>
+<div class:list={["opacity-80", className]} title={`Author is ${author}`}>
+  <p class:list={["text-sm", { "sm:text-base": size === "lg" }]}>
+    <em>By {author}</em>
+  </p>
 </div>
