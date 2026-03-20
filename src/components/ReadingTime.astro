@@ -16,20 +16,18 @@ if (!readingTime || readingTime === 0) {
 
 <div
   class:list={[
-    "flex items-center gap-x-2 text-sm opacity-80",
+    "flex items-center gap-x-1 text-sm opacity-80",
     { "sm:text-base": size === "lg" },
     className,
   ]}
-  title="Readimg time"
+  title={`Reading takes ${readingTime} minutes`}
 >
-  <span>
-    <IconClock
-      class:list={[
-        "inline-block size-6 min-w-5.5",
-        { "scale-90": size === "sm" },
-      ]}
-    />
+  <IconClock
+    class:list={[
+      "inline-block size-6 min-w-5.5",
+      { "scale-90": size === "sm" },
+    ]}
+  />
 
-    {readingTime} min
-  </span>
+  <span class="mt-0.75">{readingTime} min</span>
 </div>
